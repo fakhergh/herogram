@@ -1,4 +1,4 @@
-import IconShare from "@mui/icons-material/Share";
+import IconOpenInNew from "@mui/icons-material/OpenInNew";
 import { Chip, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
@@ -35,7 +35,7 @@ export function PostItem({
       </Box>
       <Box>
         <IconButton onClick={onShareClick}>
-          <IconShare />
+          <IconOpenInNew />
         </IconButton>
       </Box>
     </Box>

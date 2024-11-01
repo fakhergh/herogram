@@ -36,10 +36,20 @@ export function useCreatePost() {
   });
 }
 
-export function useUpdatePostPosition(id: string) {
-  return useMutation<Post, ApiError, UpdatePostPositionDto>({
-    mutationKey: ["update-post-position", id],
+export function useSortPosts() {
+  return useMutation<Array<Post>, ApiError, UpdatePostPositionDto>({
+    mutationKey: ["update-post-position"],
     mutationFn: (data: UpdatePostPositionDto) =>
-      PostsService.postsControllerUpdatePostPosition(id, data),
+      PostsService.postsControllerSortsPosts(data),
+    onSuccess: (data) => {
+      return queryClient.setQueriesData<Array<Post>>(
+        {
+          predicate: (query) => {
+            return query.queryKey.includes("posts");
+          },
+        },
+        () => data,
+      );
+    },
   });
 }

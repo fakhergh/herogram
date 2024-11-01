@@ -34,21 +34,16 @@ export class PostsService {
     });
   }
   /**
-   * @param postId
    * @param requestBody
    * @returns Post
    * @throws ApiError
    */
-  public static postsControllerUpdatePostPosition(
-    postId: string,
+  public static postsControllerSortsPosts(
     requestBody: UpdatePostPositionDto,
-  ): CancelablePromise<Post> {
+  ): CancelablePromise<Array<Post>> {
     return __request(OpenAPI, {
       method: "PATCH",
-      url: "/api/posts/{postId}/position",
-      path: {
-        postId: postId,
-      },
+      url: "/api/posts/sort",
       body: requestBody,
       mediaType: "application/json",
     });

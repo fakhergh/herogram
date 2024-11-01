@@ -12,7 +12,7 @@ export function PostItemContainer({
   ...props
 }: PostItemContainerProps) {
   const onShareClick = useCallback(async () => {
-    await navigator.clipboard.writeText(sharableUrl);
+    window.open(sharableUrl, "_blank");
   }, [sharableUrl]);
 
   return <PostItem {...props} onShareClick={onShareClick} />;

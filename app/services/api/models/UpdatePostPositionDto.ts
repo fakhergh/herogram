@@ -3,6 +3,6 @@
 /* tslint:disable */
 /* eslint-disable */
 export type UpdatePostPositionDto = {
-    position: number;
+    ids: Array<string>;
 };
 
