@@ -9,7 +9,7 @@ export function useHttpClient() {
   const { push } = useRouter();
 
   useEffect(() => {
-    OpenAPI.BASE = process.env.NEXT_PUBLIC_API_URL!;
+    OpenAPI.BASE = "http://138.197.177.155:9000";
     OpenAPI.TOKEN = async () => {
       return localStorage.getItem("token")!;
     };
