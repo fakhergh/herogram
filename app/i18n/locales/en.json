@@ -1,0 +1,108 @@
+{
+  "LoginPage": {
+    "labels": {
+      "login": "Login"
+    },
+    "links": {
+      "register": "Don't have an account? Register"
+    }
+  },
+  "LoginForm": {
+    "title": "Login",
+    "inputs": {
+      "email": {
+        "label": "Email"
+      },
+      "password": {
+        "label": "Password"
+      }
+    },
+    "buttons": {
+      "login": "Login"
+    }
+  },
+  "RegisterPage": {
+    "labels": {
+      "register": "Register"
+    }
+  },
+  "RegisterForm": {
+    "title": "Register",
+    "inputs": {
+      "name": {
+        "label": "Name"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "password": {
+        "label": "Password"
+      },
+      "confirmPassword": {
+        "label": "Confirm Password"
+      }
+    },
+    "buttons" :{
+      "register": "Register"
+    }
+  },
+  "yup": {
+    "mixed": {
+      "default": "Field is invalid",
+      "required": "Field is required",
+      "defined": "Value must be defined",
+      "notNull": "Value cannot be null",
+      "oneOf": "Value must be one of the following values: {{values}}",
+      "notOneOf": "Value must not be one of the following values: {{values}}"
+    },
+    "string": {
+      "length": "Value must be exactly {{length}} characters",
+      "min": "Value must be at least {{min}} characters",
+      "max": "Value must be at most {{max}} characters",
+      "matches": "Value must match the following: \"{{regex}}\"",
+      "email": "Value must be a valid email",
+      "url": "Value must be a valid URL",
+      "uuid": "Value must be a valid UUID",
+      "trim": "Value must be a trimmed string",
+      "lowercase": "Value must be a lowercase string",
+      "uppercase": "Value must be a upper case string"
+    },
+    "number": {
+      "min": "Value must be greater than or equal to {{min}}",
+      "max": "Value must be less than or equal to {{max}}",
+      "lessThan": "Value must be less than {{lessThan}}",
+      "moreThan": "Value must be less than {{moreThan}}",
+      "positive": "Value must be positive",
+      "negative": "Value must be negative",
+      "integer": "Value must be integer"
+    },
+    "date": {
+      "min": "Value must be later than {{min}}",
+      "max": "Value must be at earlier than {{max}}"
+    },
+    "object": {
+      "noUnknown": "Value has unspecified keys: {{unknown}}"
+    },
+    "array": {
+      "min": "List must have at least {{min}} items",
+      "max": "List must have less than or equal to {{max}} items",
+      "length": "List must have {{length}} items"
+    }
+  },
+  "PostForm": {
+    "title": "Post Form",
+    "inputs": {
+      "tags": {
+        "label": "Tags"
+      }
+    },
+    "buttons": {
+      "cancel": {
+        "title": "Cancel"
+      },
+      "submit": {
+        "title": "Save"
+      }
+    }
+  }
+}

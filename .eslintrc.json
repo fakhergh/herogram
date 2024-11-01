@@ -1,3 +1,56 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "plugins": [
+    "prettier",
+    "simple-import-sort",
+    "@tanstack/query"
+  ],
+  "ignorePatterns": [
+    "node_modules/*",
+    "**/package.json",
+    ".history/*",
+    ".vscode/*"
+  ],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "rules": {
+        "no-shadow": "off",
+        "no-undef": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-shadow": [
+          "error"
+        ],
+        "@typescript-eslint/no-unused-vars": [
+          "error"
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": [
+          "error",
+          {
+            "additionalHooks": "(useAsync|useAsyncCallback)"
+          }
+        ],
+        "@tanstack/query/exhaustive-deps": "error",
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              "@mui/*/*/*"
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }
