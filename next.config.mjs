@@ -1,8 +1,4 @@
 const nextConfig = {
-  typescript: {
-    // Disable type checking for builds
-    ignoreBuildErrors: true,
-  },
   images: {
     remotePatterns: [
       {
